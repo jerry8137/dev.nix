@@ -24,6 +24,9 @@
   ];
   home.stateVersion = "23.11";
   home.file = {
-    ".config/nvim".source = "/home/jerry/nvim.config";
+    ".config/nvim" = {
+      source = ../submodules/nvim;
+      recursive = true;
+    };
   };
 }
