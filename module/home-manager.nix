@@ -1,7 +1,7 @@
 {
   homeDirectory,
   username,
-}: {pkgs, ...}: {
+}: {pkgs, config, ...}: {
   imports = [
     ./git.nix
     ./zsh.nix
@@ -25,8 +25,13 @@
   home.stateVersion = "23.11";
   home.file = {
     ".config/nvim" = {
-      source = ../submodules/nvim;
-      recursive = true;
+      source = config.lib.file.mkOutOfStoreSymlink "/home/jerry/dotfiles/.config/nvim";
+    };
+    ".config/tmux/tmux.conf" = {
+      source = config.lib.file.mkOutOfStoreSymlink "/home/jerry/dotfiles/.config/tmux/.tmux.conf";
+    };
+    ".config/tmux/tmux.conf.local" = {
+      source = config.lib.file.mkOutOfStoreSymlink "/home/jerry/dotfiles/.config/tmux/.tmux.conf.local";
     };
   };
 }
