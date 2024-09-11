@@ -21,6 +21,9 @@
     luarocks
     gem
     tree-sitter
+    eza
+    cargo
+    tmux
   ];
   home.stateVersion = "23.11";
   home.file = {
@@ -33,5 +36,8 @@
     ".config/tmux/tmux.conf.local" = {
       source = config.lib.file.mkOutOfStoreSymlink "/home/jerry/dotfiles/.config/tmux/.tmux.conf.local";
     };
+  };
+  home.sessionVariables = {
+    EDITOR = "nvim";
   };
 }
