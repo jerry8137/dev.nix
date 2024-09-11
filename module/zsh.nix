@@ -8,8 +8,8 @@
     syntaxHighlighting.enable = true;
 
     shellAliases = {
-      ll = "ls -l";
       update = "nix run nixpkgs#home-manager -- switch --flake ~/kickstart.nix#x86_64-linux  --impure";
+      ls = "eza --icons=auto";
     };
     history = {
       size = 10000;
