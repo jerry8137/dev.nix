@@ -33,7 +33,7 @@
           homeManager = system:
             home-manager.lib.homeManagerConfiguration {
               modules = [homeManagerModule];
-              pkgs = nixpkgs.legacyPackages.${system};
+              pkgs = import nixpkgs { system = "${system}"; config = { allowUnfree = true; }; };
             };
         in {
           aarch64-darwin = homeManager "aarch64-darwin";

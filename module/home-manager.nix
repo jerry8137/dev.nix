@@ -25,6 +25,9 @@
     cargo
     tmux
     tmux-sessionizer
+    filezilla
+    nvtop
+    fastfetch
   ];
   home.stateVersion = "23.11";
   home.file = {
