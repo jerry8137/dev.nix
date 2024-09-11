@@ -24,6 +24,7 @@
     eza
     cargo
     tmux
+    tmux-sessionizer
   ];
   home.stateVersion = "23.11";
   home.file = {
