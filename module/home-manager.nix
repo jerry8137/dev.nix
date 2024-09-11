@@ -28,6 +28,7 @@
     filezilla
     nvtop
     fastfetch
+    alacritty
   ];
   home.stateVersion = "23.11";
   home.file = {
@@ -39,6 +40,9 @@
     };
     ".config/tmux/tmux.conf.local" = {
       source = config.lib.file.mkOutOfStoreSymlink "/home/jerry/dotfiles/.config/tmux/.tmux.conf.local";
+    };
+    ".config/alacritty" = {
+      source = config.lib.file.mkOutOfStoreSymlink "/home/jerry/dotfiles/.config/alacritty";
     };
   };
   home.sessionVariables = {
