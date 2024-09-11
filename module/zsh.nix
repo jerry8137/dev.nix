@@ -10,7 +10,7 @@
     shellAliases = {
       update = "nix run nixpkgs#home-manager -- switch --flake ~/kickstart.nix#x86_64-linux  --impure";
       ls = "eza --icons=auto";
-      ff = "fastfetch"
+      ff = "fastfetch";
     };
     history = {
       size = 10000;
