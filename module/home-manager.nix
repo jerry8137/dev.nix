@@ -29,6 +29,7 @@
     nvtop
     fastfetch
     alacritty
+    tokei
   ];
   home.stateVersion = "23.11";
   home.file = {
