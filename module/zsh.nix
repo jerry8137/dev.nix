@@ -22,6 +22,7 @@
       theme = "robbyrussell";
     };
     initExtra = ''
+      export PATH="$HOME/.local/bin:$PATH"
       bindkey -s '^F' 'tms\n'
       bindkey -s '^B' 'tmux a\n'
       alias config='/run/current-system/sw/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
@@ -29,7 +30,7 @@
       export SDC_DOCKER_CONTAINER_WORKING_DIRECTORY="/home/jerry/codespace/sdc/ros"
       export SDC_DOCKER_USER_OPTIONS=" \
           --env ROS_HOME=/home/jerry/.ros \
-          --env ROS_MASTER_URI=http://53-0B20827-02:11311 \
+          --env ROS_MASTER_URI=http://53-0B20827-03:11311 \
           --env SDC_CONFIG_DIR=/home/jerry/codespace/sdc/vehicle-configuration/pacifica-4 \
           --env SDC_BLACK_WIDOW_ENV_LOADER="" \
           --env MAP_DATA_PATH="/semantic_map" \
