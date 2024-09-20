@@ -12,7 +12,6 @@
   home.packages = with pkgs; [
     git
     neovim
-    btop
     curl
     wget
     fzf
@@ -26,10 +25,11 @@
     tmux
     tmux-sessionizer
     filezilla
-    nvtop
     fastfetch
     alacritty
     tokei
+    nodejs
+    vlc
   ];
   home.stateVersion = "23.11";
   home.file = {
