@@ -4,6 +4,6 @@
   programs.git = {
     enable = true;
     userName = "Jerry Hou";
-    userEmail = "jerry8137@gmail.com";
+    userEmail = "chunyu.hou@itri.org.tw";
   };
 }
