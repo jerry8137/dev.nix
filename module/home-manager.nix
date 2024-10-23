@@ -45,6 +45,9 @@
     ".config/alacritty" = {
       source = config.lib.file.mkOutOfStoreSymlink "/home/jerry/dotfiles/.config/alacritty";
     };
+    ".config/tms" = {
+      source = config.lib.file.mkOutOfStoreSymlink "/home/jerry/dotfiles/.config/tms";
+    };
   };
   home.sessionVariables = {
     EDITOR = "nvim";
