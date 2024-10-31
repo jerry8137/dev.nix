@@ -19,7 +19,7 @@
     oh-my-zsh = {
       enable = true;
       plugins = [ "git" "fzf" ];
-      theme = "robbyrussell";
+      theme = "simple";
     };
     initExtra = ''
       export PATH="$HOME/.local/bin:$PATH"
