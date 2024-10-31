@@ -76,6 +76,11 @@
       fi
       unset __mamba_setup
       # <<< mamba initialize <<<
+
+      # >>> cuda path >>>
+      export PATH=/usr/local/cuda-12.6/bin:$PATH
+      # <<< cuda path <<<
+
     '';
 
   };
