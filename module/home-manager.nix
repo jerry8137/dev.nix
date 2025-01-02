@@ -30,6 +30,7 @@
     tokei
     nodejs
     vlc
+    grc
   ];
   home.stateVersion = "23.11";
   home.file = {
