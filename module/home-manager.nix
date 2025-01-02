@@ -16,7 +16,6 @@
     wget
     fzf
     ripgrep
-    gcc
     luarocks
     gem
     tree-sitter
