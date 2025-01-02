@@ -7,11 +7,14 @@
       update = "nix run nixpkgs#home-manager -- switch --flake ~/kickstart.nix#x86_64-linux  --impure";
       ls = "eza --icons=auto";
       ff = "fastfetch";
-      config="/run/current-system/sw/bin/git --git-dir=(HOME)/.cfg/ --work-tree=(HOME)";
+      config="/run/current-system/sw/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME";
+      gst="git status";
+      glol="git log --graph --pretty=\"%Cred%h%Creset -%C(auto)%d%Creset %s %Cgreen(%ar) %C(bold blue)<%an>%Creset\"";
+      glola="git log --graph --pretty=\"%Cred%h%Creset -%C(auto)%d%Creset %s %Cgreen(%ar) %C(bold blue)<%an>%Creset\" --all";
     };
     interactiveShellInit = ''
       set fish_greeting # Disable greeting
-      set -x DISPLAY 0
+      set -x DISPLAY :0
       set -x SDC_DOCKER_CONTAINER_WORKING_DIRECTORY "/home/jerry/codespace/sdc/ros"
       set -x SDC_DOCKER_USER_OPTIONS " \
           --env ROS_HOME=/home/jerry/.ros \
@@ -34,8 +37,9 @@
           /data/pcd-maps:/data/pcd-maps:ro \
       "
       set -x SDC_DOCKER_SSL_VERIFICATION_ENABLED false
-      bind \cf 'tms\n'
-      bind \cb 'tmux a\n'
+      bind \cf 'tms'
+      bind \cb 'tmux a'
+      . "/home/jerry/miniconda3/etc/fish/conf.d/conda.fish"
     '';
     plugins = [
       # Enable a plugin (here grc for colorized command output) from nixpkgs
@@ -51,15 +55,5 @@
         };
       }
     ];
-  };
-  programs.bash = {
-    enable = true;
-    interactiveShellInit = ''
-      if [[ $(${pkgs.procps}/bin/ps --no-header --pid=$PPID --format=comm) != "fish" && -z ''${BASH_EXECUTION_STRING} ]]
-      then
-        shopt -q login_shell && LOGIN_OPTION='--login' || LOGIN_OPTION=""
-        exec ${pkgs.fish}/bin/fish $LOGIN_OPTION
-      fi
-    '';
   };
 }
