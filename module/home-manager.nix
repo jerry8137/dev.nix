@@ -5,6 +5,7 @@
   imports = [
     ./git.nix
     ./zsh.nix
+    ./fish.nix
   ];
   # add home-manager user settings here
   home.homeDirectory = homeDirectory;
