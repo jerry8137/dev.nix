@@ -50,6 +50,9 @@
     ".config/tms" = {
       source = config.lib.file.mkOutOfStoreSymlink "/home/jerry/dotfiles/.config/tms";
     };
+    ".config/starship.toml" = {
+      source = config.lib.file.mkOutOfStoreSymlink "/home/jerry/dotfiles/.config/starship.toml";
+    };
   };
   home.sessionVariables = {
     EDITOR = "nvim";
