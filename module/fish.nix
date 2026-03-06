@@ -42,7 +42,6 @@
       set -x SDC_SHELL_ENV /home/jerry/.sdc-shell-env
       bind \cf 'tms'
       bind \cb 'tmux a'
-      . "/home/jerry/miniconda3/etc/fish/conf.d/conda.fish"
       if status is-login; or set -q SSH_TTY
         fish_add_path --path /home/jerry/.nix-profile/bin
         fish_add_path --path /home/jerry/.local/bin

@@ -3,7 +3,7 @@
 {
   programs.git = {
     enable = true;
-    userName = "Jerry Hou";
-    userEmail = "chunyu.hou@itri.org.tw";
+    settings.user.name = "Jerry Hou";
+    settings.user.email = "jerry8137@gmail.com";
   };
 }

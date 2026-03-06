@@ -4,7 +4,6 @@
 }: {pkgs, config, ...}: {
   imports = [
     ./git.nix
-    ./zsh.nix
     ./fish.nix
   ];
   # add home-manager user settings here
@@ -26,18 +25,18 @@
     tmux-sessionizer
     filezilla
     fastfetch
-    alacritty
     tokei
     nodejs
     vlc
     grc
     yt-dlp
+    uv
+    bun
+    btop
+    typst
   ];
   home.stateVersion = "23.11";
   home.file = {
-    ".config/nvim" = {
-      source = config.lib.file.mkOutOfStoreSymlink "/home/jerry/dotfiles/.config/nvim";
-    };
     ".config/tmux/tmux.conf" = {
       source = config.lib.file.mkOutOfStoreSymlink "/home/jerry/dotfiles/.config/tmux/.tmux.conf";
     };
